@@ -1,7 +1,7 @@
 from daemoniker import Daemonizer
 import os, time, dropbox, _thread
 
-access_token = 'your access token'
+access_token = 'your acces token'
 device_name = 'your device'
 device_location = 'your location'
 folder_path = '/' + device_location + '/' + device_name
@@ -15,7 +15,7 @@ with Daemonizer() as (is_setup, daemonizer):
 	# We need to explicitly pass resources to the daemon; other variables
 	# may not be correct
 	is_parent = daemonizer(
-		str(time.clock())
+		str(time.time())
 	)
 
 	if is_parent:
